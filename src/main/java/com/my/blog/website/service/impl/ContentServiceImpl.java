@@ -44,6 +44,7 @@ public class ContentServiceImpl implements IContentService {
     @Resource
     private IMetaService metasService;
 
+
     @Override
     @Transactional
     public String publish(ContentVo contents) {

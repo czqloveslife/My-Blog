@@ -4,10 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ContentVoExample {
+
+    //orderByClause字段用于指定ORDER BY条件,这个条件没有构造方法,直接通过传递字符串值指定。
     protected String orderByClause;
 
+    //Example类的distinct字段用于指定DISTINCT查询。
     protected boolean distinct;
 
+    //这个集合中的Criteria是由OR连接的，是逻辑或关系。
     protected List<Criteria> oredCriteria;
 
     private Integer limit;

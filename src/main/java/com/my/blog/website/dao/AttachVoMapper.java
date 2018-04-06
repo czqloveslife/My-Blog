@@ -2,12 +2,17 @@ package com.my.blog.website.dao;
 
 import com.my.blog.website.modal.Vo.AttachVo;
 import com.my.blog.website.modal.Vo.AttachVoExample;
-import java.util.List;
+import com.my.blog.website.provider.AttachVoProvider;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.SelectProvider;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 @Component
 public interface AttachVoMapper {
+
+    //@SelectProvider(type = AttachVoProvider.class, method = "countByExample")
     long countByExample(AttachVoExample example);
 
     int deleteByExample(AttachVoExample example);
